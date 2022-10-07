@@ -1,0 +1,45 @@
+name: infra-launch-action
+on:
+  push:
+    branches:
+      - feature/vpc-lambda
+env:
+  AWS_DEFAULT_REGION: us-east-1
+permissions:
+  id-token: write
+  contents: write
+jobs:
+  terragrunt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v3
+      - name: Install zip
+        uses: montudor/action-zip@v1
+      - name: 'Install AWS cli'
+        id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@master
+        with:
+          version: 2
+          rootdir: ""
+          workdir: ""
+      - name: 'ConfigureAwsCredentials'
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: ${{ env.AWS_DEFAULT_REGION }}
+          role-to-assume: ${{ secrets.APES_IAM_ROLE }}
+          role-session-name: infra-launch-session
+      - name: 'Setup Terraform and terragrunt'
+        uses: autero1/action-terragrunt@v1.1.1
+        with:
+          terragrunt_version: latest
+      - name: 'Test terragrunt installation'
+        run: terragrunt --version
+
+      #- name: 'Terragrunt apply'
+      #       # run: terragrunt run-all apply --terragrunt-non-interactive #--terragrunt-exclude-dir "modules/cloudfront/"
+      #             #- name: 'Update resources'
+      #                   #  run: ./update.sh
+      #                         # - name: 'Temporary terraform destroy'
+      #                               #   run: terragrunt run-all destroy --terragrunt-non-interactive
+      #                                     
