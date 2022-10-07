@@ -1,0 +1,271 @@
+{
+  "eventId": 1,
+  "eventName": "HBCL",
+  "matches": [
+      {
+          "matchId": 1,
+          "matchName": "Match 1",
+          "teams": [
+              {
+                  "teamId": 7,
+                  "teamName": "Python Predators",
+                  "teamLogo": "assets/images/teamlogo/teamlogo7.png"
+              },
+              {
+                  "teamId": 5,
+                  "teamName": "JAVA Riders",
+                  "teamLogo": "assets/images/teamlogo/teamlogo5.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "18 Aug",
+          "matchTime": "02:00 PM",
+          "endTime": "02:45 PM",
+          "group": "A",
+          "live":true
+      },
+      {
+          "matchId": 2,
+          "matchName": "Match 2",
+          "teams": [
+              {
+                  "teamId": 8,
+                  "teamName": "UI Unicorns",
+                  "teamLogo": "assets/images/teamlogo/teamlogo8.png"
+              },
+              {
+                  "teamId": 3,
+                  "teamName": ".Net Dragons",
+                  "teamLogo": "assets/images/teamlogo/teamlogo3.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "18 Aug",
+          "matchTime": "03:00 PM",
+          "endTime": "03:45 PM",
+          "group": "B",
+          "live":false
+      },
+      {
+          "matchId": 3,
+          "matchName": "Match 3",
+          "teams": [
+              {
+                  "teamId": 1,
+                  "teamName": "Data Daredevils",
+                  "teamLogo": "assets/images/teamlogo/teamlogo1.png"
+              },
+              {
+                  "teamId": 2,
+                  "teamName": "Design Dazzlers",
+                  "teamLogo": "assets/images/teamlogo/teamlogo2.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "18 Aug",
+          "matchTime": "04:15 PM",
+          "endTime": "05:00 PM",
+          "group": "A",
+          "live":false
+      },
+      {
+          "matchId": 4,
+          "matchName": "Match 4",
+          "teams": [
+              {
+                  "teamId": 6,
+                  "teamName": "Product Panthers",
+                  "teamLogo": "assets/images/teamlogo/teamlogo6.png"
+              },
+              {
+                  "teamId": 4,
+                  "teamName": "Enabling Eternals",
+                  "teamLogo": "assets/images/teamlogo/teamlogo4.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "18 Aug",
+          "matchTime": "05:15 PM",
+          "endTime": "06:00 PM",
+          "group": "B",
+          "live":false
+      },
+      {
+          "matchId": 5,
+          "matchName": "Match 5",
+          "teams": [
+              {
+                  "teamId": 8,
+                  "teamName": "UI Unicorns",
+                  "teamLogo":"assets/images/teamlogo/teamlogo8.png"
+              },
+              {
+                  "teamId": 6,
+                  "teamName": "Product Panthers",
+                  "teamLogo": "assets/images/teamlogo/teamlogo6.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "19 Aug",
+          "matchTime": "02:00 PM",
+          "endTime": "02:45 PM",
+          "group": "B",
+          "live":false
+      },
+      {
+          "matchId": 6,
+          "matchName": "Match 6",
+          "teams": [
+              {
+                  "teamId": 7,
+                  "teamName": "Python Predators",
+                  "teamLogo": "assets/images/teamlogo/teamlogo7.png"
+              },
+              {
+                  "teamId": 1,
+                  "teamName": "Data Daredevils",
+                  "teamLogo": "assets/images/teamlogo/teamlogo1.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "19 Aug",
+          "matchTime": "03:00 PM",
+          "endTime": "03:45 PM",
+          "group": "A",
+          "live":false
+      },
+      {
+          "matchId": 7,
+          "matchName": "Match 7",
+          "teams": [
+              {
+                  "teamId": 3,
+                  "teamName": ".Net Dragons",
+                  "teamLogo": "assets/images/teamlogo/teamlogo3.png"
+              },
+              {
+                  "teamId": 4,
+                  "teamName": "Enabling Eternals",
+                  "teamLogo": "assets/images/teamlogo/teamlogo4.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "19 Aug",
+          "matchTime": "04:15 PM",
+          "endTime": "05:00 PM",
+          "group": "B",
+          "live":false
+      },
+      {
+          "matchId": 8,
+          "matchName": "Match 8",
+          "teams": [
+              {
+                  "teamId": 5,
+                  "teamName": "JAVA Riders",
+                  "teamLogo": "assets/images/teamlogo/teamlogo5.png"
+              },
+              {
+                  "teamId": 2,
+                  "teamName": "Design Dazzlers",
+                  "teamLogo": "assets/images/teamlogo/teamlogo2.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "19 Aug",
+          "matchTime": "05:15 PM",
+          "endTime": "06:00 PM",
+          "group": "A",
+          "live":false
+      },
+      {
+          "matchId": 9,
+          "matchName": "Match 9",
+          "teams": [
+              {
+                  "teamId": 7,
+                  "teamName": "Python Predators",
+                  "teamLogo": "assets/images/teamlogo/teamlogo7.png"
+              },
+              {
+                  "teamId": 2,
+                  "teamName": "Design Dazzlers",
+                  "teamLogo": "assets/images/teamlogo/teamlogo2.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "22 Aug",
+          "matchTime": "02:00 PM",
+          "endTime": "02:45 PM",
+          "group": "A",
+          "live":false
+      },
+      {
+          "matchId": 10,
+          "matchName": "Match 10",
+          "teams": [
+              {
+                  "teamId": 8,
+                  "teamName": "UI Unicorns",
+                  "teamLogo": "assets/images/teamlogo/teamlogo8.png"
+              },
+              {
+                  "teamId": 4,
+                  "teamName": "Enabling Eternals",
+                  "teamLogo": "assets/images/teamlogo/teamlogo4.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "22 Aug",
+          "matchTime": "03:00 PM",
+          "endTime": "03:45 PM",
+          "group": "B",
+          "live":false
+      },
+      {
+          "matchId": 11,
+          "matchName": "Match 11",
+          "teams": [
+              {
+                  "teamId": 5,
+                  "teamName": "JAVA Riders",
+                  "teamLogo": "assets/images/teamlogo/teamlogo5.png"
+              },
+              {
+                  "teamId": 1,
+                  "teamName": "Data Daredevils",
+                  "teamLogo":"assets/images/teamlogo/teamlogo1.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "22 Aug",
+          "matchTime": "04:15 PM",
+          "endTime": "05:00 PM",
+          "group": "A",
+          "live":false
+      },
+      {
+          "matchId": 12,
+          "matchName": "Match 12",
+          "teams": [
+              {
+                  "teamId": 3,
+                  "teamName": ".Net Dragons",
+                  "teamLogo": "assets/images/teamlogo/teamlogo3.png"
+              },
+              {
+                  "teamId": 6,
+                  "teamName": "Product Panthers",
+                  "teamLogo": "assets/images/teamlogo/teamlogo6.png"
+              }
+          ],
+          "location": "Hashedin Office, Bangalore",
+          "matchDate": "22 Aug",
+          "matchTime": "05:15 PM",
+          "endTime": "06:00 PM",
+          "group": "B",
+          "live":false
+      }
+      
+  ]
+}

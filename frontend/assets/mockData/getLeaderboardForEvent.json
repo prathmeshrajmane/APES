@@ -1,0 +1,156 @@
+{
+  "eventId": 1,
+  "eventName": "HBCL",
+  "leaderboardData": {
+    "pointTable": [
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      }
+    ],
+    "highestRun": [
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      }
+    ],
+    "highestWicket": [
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      }
+    ],
+    "sixes": [
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      }
+    ],
+    "fours": [
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      },
+      {
+        "teamName": "SB",
+        "teamLogo": "",
+        "points1": 2,
+        "points2": 2,
+        "lost": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,363 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  SgCidr:
+    Type: String
+  InputName:
+    Type: String
+  DestinationA:
+    Type: String
+  DestinationB:
+    Type: String
+  InputCodec:
+    Type: String
+  MaxBitRate:
+    Type: String
+  InputResolution:
+    Type: String
+  MediaAccessRoleArn:
+    Type: String
+  MediaPackageChannelId:
+    Type: String
+  MediaPackageDestinationId:
+    Type: String
+  MediaLiveChannelName:
+    Type: String
+  MediaLiveOutputGroupName:
+    Type: String
+  MediaLiveOutPutGroupDestinationId:
+    Type: String
+  MediaLiveOutputName:
+    Type: String
+  MediaLiveVideoDescriptionName:
+    Type: String
+  VideoDescriptionFramerateControl:
+    Type: String
+  VideoDescriptionParControl:
+    Type: String
+  VideoDescriptionFramerateDenominator:
+    Type: Number
+  VideoDescriptionFramerateNumerator:
+    Type: Number
+  VideoDescriptionAdaptiveQuantization:
+    Type: String
+  VideoDescriptionAfdSignaling:
+    Type: String
+  VideoDescriptionBitrate:
+    Type: Number
+  VideoDescriptionColorMetadata:
+    Type: String
+  VideoDescriptionEntropyEncoding:
+    Type: String
+  VideoDescriptionFlickerAq:
+    Type: String
+  VideoDescriptionGopBReference:
+    Type: String
+  VideoDescriptionGopClosedCadence:
+    Type: Number
+  VideoDescriptionGopNumBFrames:
+    Type: Number
+  VideoDescriptionGopSize:
+    Type: Number
+  VideoDescriptionGopSizeUnits:
+    Type: String
+  VideoDescriptionLevel:
+    Type: String
+  VideoDescriptionLookAheadRateControl:
+    Type: String
+  VideoDescriptionNumRefFrames:
+    Type: Number
+  VideoDescriptionParDenominator:
+    Type: Number
+  VideoDescriptionParNumerator:
+    Type: String
+  VideoDescriptionProfile:
+    Type: String
+  VideoDescriptionRateControlMode:
+    Type: String
+  VideoDescriptionSceneChangeDetect:
+    Type: String
+  VideoDescriptionSlices:
+    Type: Number
+  VideoDescriptionSpatialAq:
+    Type: String
+  VideoDescriptionSyntax:
+    Type: String
+  VideoDescriptionTemporalAq:
+    Type: String
+  VideoDescriptionTimecodeInsertion:
+    Type: String
+  VideoDescriptionHeight:
+    Type: Number
+  VideoDescriptionWidth:
+    Type: Number
+  MediaLiveArchiveOutputGroupName:
+    Type: String
+  MediaLiveArchiveOutputName:
+    Type: String
+  MediaLiveArchiveDestinationId:
+    Type: String
+  MediaLiveArchiveDestinationURL:
+    Type: String
+  M2tsAbsentInputAudioBehavior:
+    Type: String
+  M2tsArib:
+    Type: String
+  M2tsAribCaptionsPid:
+    Type: String
+  M2tsAribCaptionsPidControl:
+    Type: String
+  M2tsAudioBufferModel:
+    Type: String
+  M2tsAudioFramesPerPes:
+    Type: Number
+  M2tsAudioPids:
+    Type: String
+  M2tsAudioStreamType:
+    Type: String
+  M2tsBufferModel:
+    Type: String
+  M2tsCcDescriptor:
+    Type: String
+  M2tsDvbSubPids:
+    Type: String
+  M2tsDvbTeletextPid:
+    Type: String
+  M2tsEbif:
+    Type: String
+  M2tsEbpAudioInterval:
+    Type: String
+  M2tsEbpPlacement:
+    Type: String
+  M2tsEsRateInPes:
+    Type: String
+  M2tsEtvPlatformPid:
+    Type: String
+  M2tsEtvSignalPid:
+    Type: String
+  M2tsKlv:
+    Type: String
+  M2tsKlvDataPids:
+    Type: String
+  M2tsNielsenId3Behavior:
+    Type: String
+  M2tsPatInterval:
+    Type: Number
+  M2tsPcrControl:
+    Type: String
+  M2tsPcrPeriod:
+    Type: Number
+  M2tsPmtInterval:
+    Type: Number
+  M2tsPmtPid:
+    Type: String
+  M2tsRateMode:
+    Type: String
+  M2tsScte27Pids:
+    Type: String
+  M2tsScte35Control:
+    Type: String
+  M2tsScte35Pid:
+    Type: String
+  M2tsSegmentationMarkers:
+    Type: String
+  M2tsSegmentationStyle:
+    Type: String
+  M2tsTimedMetadataBehavior:
+    Type: String
+  M2tsTimedMetadataPid:
+    Type: String
+  M2tsVideoPid:
+    Type: String
+  AudioDescriptionsAudioSelectorName:
+    Type: String
+  AudioDescriptionsAudioTypeControl:
+    Type: String
+  AudioDescriptionsLanguageCodeControl:
+    Type: String
+  AudioDescriptionsName:
+    Type: String
+  AacSettingsBitrate:
+    Type: Number
+  AacSettingsCodingMode:
+    Type: String
+  AacSettingsInputType:
+    Type: String
+  AacSettingsProfile:
+    Type: String
+  AacSettingsRateControlMode:
+    Type: String
+  AacSettingsRawFormat:
+    Type: String
+  AacSettingsSampleRate:
+    Type: Number
+  AacSettingsSpec:
+    Type: String
+#  MediaLiveStreamName:
+#    Type: String
+
+Resources:
+    MediaLiveInputSg:
+        Type: AWS::MediaLive::InputSecurityGroup
+        Properties:
+            WhitelistRules:
+                - Cidr: !Ref SgCidr
+    MediaLiveInput:
+        Type: AWS::MediaLive::Input
+        Properties:
+            Type: RTMP_PUSH
+            Name: !Ref InputName
+            Destinations:
+                - StreamName: !Ref DestinationA
+                - StreamName: !Ref DestinationB
+            InputSecurityGroups:
+                - !Ref MediaLiveInputSg
+            RoleArn: !Ref MediaAccessRoleArn
+            Tags:
+              Project: APES
+    MediaLiveChannel:
+        Type: AWS::MediaLive::Channel
+        Properties:
+            ChannelClass: SINGLE_PIPELINE
+            Name: !Ref MediaLiveChannelName
+            Destinations:
+                - Id: !Ref MediaPackageDestinationId
+                  MediaPackageSettings:
+                    - ChannelId: !Ref MediaPackageChannelId
+                - Id: !Ref MediaLiveArchiveDestinationId
+                  Settings:
+                    - Url: !Ref MediaLiveArchiveDestinationURL
+            InputAttachments:
+                - InputAttachmentName: !Ref MediaLiveInput
+                  InputSettings:
+                      AudioSelectors: []
+                      CaptionSelectors: []
+                      DeblockFilter: DISABLED
+                      DenoiseFilter: DISABLED
+                      FilterStrength: "1"
+                      InputFilter: AUTO
+                      Smpte2038DataPreference: IGNORE
+                      SourceEndBehavior: CONTINUE
+                  InputId: !Ref MediaLiveInput
+            InputSpecification:
+                Codec: !Ref InputCodec
+                MaximumBitrate: !Ref MaxBitRate
+                Resolution: !Ref InputResolution
+            RoleArn: !Ref MediaAccessRoleArn
+            EncoderSettings:
+                OutputGroups:
+                    - Name: !Ref MediaLiveOutputGroupName
+                      OutputGroupSettings:
+                          MediaPackageGroupSettings:
+                              Destination:
+                                  DestinationRefId: !Ref MediaPackageDestinationId
+                      Outputs:
+                          - OutputName: !Ref MediaLiveOutputName
+                            OutputSettings:
+                                MediaPackageOutputSettings: { }
+                            VideoDescriptionName: !Ref MediaLiveVideoDescriptionName
+                            AudioDescriptionNames:
+                              - !Ref AudioDescriptionsName
+                    - Name: !Ref MediaLiveArchiveOutputGroupName
+                      OutputGroupSettings:
+                          ArchiveGroupSettings:
+                              Destination:
+                                  DestinationRefId: !Ref MediaLiveArchiveDestinationId
+                      Outputs:
+                          - OutputName: !Ref MediaLiveArchiveOutputName
+                            OutputSettings:
+                                ArchiveOutputSettings:
+                                    ContainerSettings:
+                                        M2tsSettings:
+                                            AbsentInputAudioBehavior: !Ref M2tsAbsentInputAudioBehavior
+                                            Arib: !Ref  M2tsArib
+                                            AribCaptionsPid: !Ref M2tsAribCaptionsPid
+                                            AribCaptionsPidControl: !Ref M2tsAribCaptionsPidControl
+                                            AudioBufferModel: !Ref M2tsAudioBufferModel
+                                            AudioFramesPerPes: !Ref M2tsAudioFramesPerPes
+                                            AudioPids: !Ref M2tsAudioPids
+                                            AudioStreamType: !Ref M2tsAudioStreamType
+                                            BufferModel: !Ref M2tsBufferModel
+                                            CcDescriptor: !Ref M2tsCcDescriptor
+                                            DvbSubPids: !Ref M2tsDvbSubPids
+                                            DvbTeletextPid: !Ref M2tsDvbTeletextPid
+                                            Ebif: !Ref M2tsEbif
+                                            EbpAudioInterval: !Ref M2tsEbpAudioInterval
+                                            EbpPlacement: !Ref M2tsEbpPlacement
+                                            EsRateInPes: !Ref M2tsEsRateInPes
+                                            EtvPlatformPid: !Ref M2tsEtvPlatformPid
+                                            EtvSignalPid: !Ref M2tsEtvSignalPid
+                                            Klv: !Ref M2tsKlv
+                                            KlvDataPids: !Ref M2tsKlvDataPids
+                                            NielsenId3Behavior: !Ref M2tsNielsenId3Behavior
+                                            PatInterval: !Ref M2tsPatInterval
+                                            PcrControl: !Ref M2tsPcrControl
+                                            PcrPeriod: !Ref M2tsPcrPeriod
+                                            PmtInterval: !Ref M2tsPmtInterval
+                                            PmtPid: !Ref M2tsPmtPid
+                                            RateMode: !Ref M2tsRateMode
+                                            Scte27Pids: !Ref M2tsScte27Pids
+                                            Scte35Control: !Ref M2tsScte35Control
+                                            Scte35Pid: !Ref M2tsScte35Pid
+                                            SegmentationMarkers: !Ref M2tsSegmentationMarkers
+                                            SegmentationStyle: !Ref M2tsSegmentationStyle
+                                            TimedMetadataBehavior: !Ref M2tsTimedMetadataBehavior
+                                            TimedMetadataPid: !Ref M2tsTimedMetadataPid
+                                            VideoPid: !Ref M2tsVideoPid
+                            VideoDescriptionName: !Ref MediaLiveVideoDescriptionName
+                            AudioDescriptionNames:
+                              - !Ref AudioDescriptionsName
+
+                VideoDescriptions:
+                    - Name: !Ref MediaLiveVideoDescriptionName
+                      CodecSettings:
+                          H264Settings:
+                              FramerateControl: !Ref VideoDescriptionFramerateControl
+                              ParControl: !Ref VideoDescriptionParControl
+                              FramerateDenominator: !Ref VideoDescriptionFramerateDenominator
+                              FramerateNumerator: !Ref VideoDescriptionFramerateNumerator
+                              AdaptiveQuantization: !Ref VideoDescriptionAdaptiveQuantization
+                              AfdSignaling: !Ref VideoDescriptionAfdSignaling
+                              Bitrate: !Ref VideoDescriptionBitrate
+                              ColorMetadata: !Ref VideoDescriptionColorMetadata
+                              EntropyEncoding: !Ref VideoDescriptionEntropyEncoding
+                              FlickerAq: !Ref VideoDescriptionFlickerAq
+                              GopBReference: !Ref VideoDescriptionGopBReference
+                              GopClosedCadence: !Ref VideoDescriptionGopClosedCadence
+                              GopNumBFrames: !Ref VideoDescriptionGopNumBFrames
+                              GopSize: !Ref VideoDescriptionGopSize
+                              GopSizeUnits: !Ref VideoDescriptionGopSizeUnits
+                              Level: !Ref VideoDescriptionLevel
+                              LookAheadRateControl: !Ref VideoDescriptionLookAheadRateControl
+                              NumRefFrames: !Ref VideoDescriptionNumRefFrames
+                              ParDenominator: !Ref VideoDescriptionParDenominator
+                              ParNumerator: !Ref VideoDescriptionParNumerator
+                              Profile: !Ref VideoDescriptionProfile
+                              RateControlMode: !Ref VideoDescriptionRateControlMode
+                              SceneChangeDetect: !Ref VideoDescriptionSceneChangeDetect
+                              Slices: !Ref VideoDescriptionSlices
+                              SpatialAq: !Ref VideoDescriptionSpatialAq
+                              Syntax: !Ref VideoDescriptionSyntax
+                              TemporalAq: !Ref VideoDescriptionTemporalAq
+                              TimecodeInsertion: !Ref VideoDescriptionTimecodeInsertion
+                      Height: !Ref VideoDescriptionHeight
+                      Width: !Ref VideoDescriptionWidth
+
+                AudioDescriptions:
+                    - AudioSelectorName: !Ref AudioDescriptionsAudioSelectorName
+                      AudioTypeControl: !Ref AudioDescriptionsAudioTypeControl
+                      CodecSettings:
+                          AacSettings:
+                              Bitrate: !Ref AacSettingsBitrate
+                              CodingMode: !Ref AacSettingsCodingMode
+                              InputType: !Ref AacSettingsInputType
+                              Profile: !Ref AacSettingsProfile
+                              RateControlMode: !Ref AacSettingsRateControlMode
+                              RawFormat: !Ref AacSettingsRawFormat
+                              SampleRate: !Ref AacSettingsSampleRate
+                              Spec: !Ref AacSettingsSpec
+                      LanguageCodeControl: !Ref AudioDescriptionsLanguageCodeControl
+                      Name: !Ref AudioDescriptionsName
+                TimecodeConfig:
+                    Source: EMBEDDED
+            Tags:
+              Project: APES

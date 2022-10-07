@@ -1,0 +1,605 @@
+{
+    "eventId": 1,
+    "eventName": "HBCL",
+    "teams": [
+      {
+        "teamId": 1,
+        "teamName": "Data Daredevils",
+        "teamLogo": "assets/images/teamlogo/teamlogo1.png",
+        "teambackgroundimg":"assets/images/teamplayerbimg/datadaredavils.png",
+        "members": [
+          {
+            "memberId": 1,
+            "name": "Srishti Jain",
+            "memberImage":"assets/images/teamimagebaground/Card-1.png",
+            "description":"Batsman"
+          },
+          {
+            "memberId": 2,
+            "name": "Eva",
+            "memberImage": "assets/images/teamimagebaground/Card-1.png",
+            "description":"Batsman"
+          },
+          {
+            "memberId": 3,
+            "name": "Anupam Anurag",
+            "memberImage":"assets/images/teamimagebaground/Card-1.png",
+            "description":"Batsman"
+          },
+          {
+            "memberId": 4,
+            "name": "Smaran Nama",
+            "memberImage": "assets/images/teamimagebaground/Card-1.png",
+            "description":"Batsman"
+          },
+          {
+            "memberId": 5,
+            "name": "Harshvardhan Ojha",
+            "memberImage": "assets/images/teamimagebaground/Card-1.png",
+            "description":"Batsman"
+          },
+          {
+            "memberId": 6,
+            "name": "Sumanth K M",
+            "memberImage": "assets/images/teamimagebaground/Card-1.png",
+            "description":"Batsman"
+          },
+          {
+            "memberId": 7,
+            "name": "K R Avinash Upadhyaya",
+            "memberImage": "assets/images/teamimagebaground/Card-1.png",
+            "description":"Batsman"
+          },
+          {
+            "memberId": 8,
+            "name": "Sachin Prajapati",
+            "memberImage": "assets/images/teamimagebaground/Card-1.png",
+            "description":"Batsman"
+          },
+          {
+            "memberId": 9,
+            "name": "D R Yashas",
+            "memberImage":"assets/images/teamimagebaground/Card-1.png",
+            "description":"Batsman"
+          },
+          {
+            "memberId": 10,
+            "name": "Srini Srinaga Kedar",
+            "memberImage": "assets/images/teamimagebaground/Card-1.png",
+            "description":"Batsman"
+          },
+          {
+            "memberId": 11,
+            "name": "Bharat",
+            "memberImage": "assets/images/teamimagebaground/Card-1.png",
+            "description":"Batsman"
+          }
+        ]
+      },
+      {
+        "teamId": 2,
+        "teamName": "Design Dazzlers",
+        "teamLogo": "assets/images/teamlogo/teamlogo2.png",
+        "teambackgroundimg":"assets/images/teamplayerbimg/designDazler.png",
+        "members": [
+            {
+              "memberId": 1,
+              "name": "Sandhya Adapa",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 2,
+              "name": "Syed Shoaib",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 3,
+              "name": "Sanket Sunkad",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 4,
+              "name": "Sahadev",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 5,
+              "name": "Divyansh Shrivastava",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 6,
+              "name": "Das Pranay Prakash",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 7,
+              "name": "Srisathyababu S",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 8,
+              "name": "Girish P Kulkarni",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 9,
+              "name": "Rathan Srinivas",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 10,
+              "name": "Amarnath Saravanan",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 11,
+              "name": "Amarnath Saravanan",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            }
+          ]
+      },
+      {
+        "teamId": 3,
+        "teamName": ".Net Dragons",
+        "teamLogo": "assets/images/teamlogo/teamlogo3.png",
+        "teambackgroundimg":"assets/images/teamplayerbimg/javariders.png",
+
+        "members": [
+            {
+              "memberId": 1,
+              "name": "Priyanka Priyadarshinee",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 2,
+              "name": "Paras Pahwa",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 3,
+              "name": "Parth Khurana",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 4,
+              "name": "Nayan Jogi",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 5,
+              "name": "Gaurav Surana",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 6,
+              "name": "Aditya Mishra",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 7,
+              "name": "Pradhumna Lnu",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 8,
+              "name": "Aravinth Manoharan",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 9,
+              "name": "Suria Kant",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 10,
+              "name": "Pillutla Alochan",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 11,
+              "name": "Spandan Ghosh",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            }
+          ]
+      },
+      {
+        "teamId": 4,
+        "teamName": "Enabling Eternals",
+        "teamLogo": "assets/images/teamlogo/teamlogo4.png",
+        "teambackgroundimg":"assets/images/teamplayerbimg/enablingeternals.png",
+
+        "members": [
+            {
+              "memberId": 1,
+              "name": "Nikitaseles S Pinto",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 2,
+              "name": "Suhail Biju",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 3,
+              "name": " Tejas Manu S",
+              "memberImage":"assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 4,
+              "name": "Kanishk Kejriwal",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 5,
+              "name": "Manoranjan Kasvi",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 6,
+              "name": "Deepesh Kaushik",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 7,
+              "name": "Akash Kumar",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 8,
+              "name": "Patitapaban Mohapatra",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 9,
+              "name": "Nishith R Kashyap",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 10,
+              "name": "Pramod KS",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 11,
+              "name": "Himanshu Varshney",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            }
+          ]
+      },
+      {
+        "teamId": 5,
+        "teamName": "JAVA Riders",
+        "teamLogo": "assets/images/teamlogo/teamlogo5.png",
+        "teambackgroundimg":"assets/images/teamplayerbimg/javariders.png",
+
+        "members": [
+            {
+              "memberId": 1,
+              "name": "Shakthi Shantha Lakshmi",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 2,
+              "name": "Harshita Gupta",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 3,
+              "name": "Atul Raj",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 4,
+              "name": "Ramu Prasad",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 5,
+              "name": "Suraj Das",
+              "memberImage":"assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 6,
+              "name": "Aseem Srivastava",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 7,
+              "name": "Ascharya Soni",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 8,
+              "name": "Surya Lagadapati",
+              "memberImage":"assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 9,
+              "name": "Sankeerth K R",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 10,
+              "name": "Padmapani Patra",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 11,
+              "name": "Srinath",
+              "memberImage":"assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            }
+          ]
+      },
+      {
+        "teamId": 6,
+        "teamName": "Product Panthers",
+        "teamLogo": "assets/images/teamlogo/teamlogo6.png",
+        "teambackgroundimg":"assets/images/teamplayerbimg/productpath.png",
+
+        "members": [
+            {
+              "memberId": 1,
+              "name": "Sonali Sawlani",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 2,
+              "name": "Rhea Sanjan BR",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 3,
+              "name": "Nagendra Prasad CA",
+              "memberImage":"assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 4,
+              "name": "Pyla Santha Ram",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 5,
+              "name": "Ankit Kumar",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 6,
+              "name": "Angadh Srivastava",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Bowler"
+            },
+            {
+              "memberId": 7,
+              "name": "Shubham Kumar",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 8,
+              "name": "Arnab Poddar",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 9,
+              "name": "Avinash Kumar",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 10,
+              "name": "Ateev Gupta",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 11,
+              "name": "Badri Sundararajan",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            }
+          ]
+      },
+      {
+        "teamId": 7,
+        "teamName": "Python Predators",
+        "teamLogo": "assets/images/teamlogo/teamlogo7.png",
+        "teambackgroundimg":"assets/images/teamplayerbimg/pythonpred.png",
+
+        "members": [
+            {
+              "memberId": 1,
+              "name": "Purva Shrivastava",
+              "memberImage":"assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 2,
+              "name": "Anusha Somashekar",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 3,
+              "name": "Thakur Manish Ramvinay",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 4,
+              "name": "Chirag Sharma",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 5,
+              "name": "Kiran V Gireesh",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 6,
+              "name": "Prashanth HJ",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 7,
+              "name": "Shivam",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 8,
+              "name": "Mittapalli Haribabu",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 9,
+              "name": "Ujjwal Kumar Jha",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 10,
+              "name": "Anto Jose",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 11,
+              "name": "Amit Behl",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            }
+          ]
+      },
+      {
+        "teamId": 8,
+        "teamName": "UI Unicorns",
+        "teamLogo": "assets/images/teamlogo/teamlogo8.png",
+        "teambackgroundimg":"assets/images/teamplayerbimg/UiUnicorns.png",
+
+        "members": [
+            {
+              "memberId": 1,
+              "name": "Swapna GM",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 2,
+              "name": "Surbhi Chauhan",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 3,
+              "name": "Kaushal Saboo",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 4,
+              "name": "Ashwin Kumar",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 5,
+              "name": "Tushan Das",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 6,
+              "name": "Baraka Rohith Kumar",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 7,
+              "name": "Praveenkumar Murugavel",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 8,
+              "name": "Akhil Nigam",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 9,
+              "name": "Mahendra Shivalingappa",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 10,
+              "name": "Kishan Kumara",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            },
+            {
+              "memberId": 11,
+              "name": "Shiva Prasad",
+              "memberImage": "assets/images/teamimagebaground/Card-1.png",
+              "description":"Batsman"
+            }
+          ]
+      }
+    ]
+  }
+

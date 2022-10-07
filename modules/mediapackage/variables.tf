@@ -1,0 +1,36 @@
+variable "mediapackage_channel_id"     {}
+variable "mediapackage-stack_name" {}
+variable "mediapackage_hls_manifest_name" {}
+variable "mediapackage_manifest_id" {}
+variable "mediapackage_segment_duration_seconds" {}
+variable "mediapackage_maxvideo_bitspersecond" {}
+variable "mediapackage_minvideo_bitspersecond" {}
+variable "mediapackage_stream_order" {}
+variable "mediapackage_origin_id" {}
+variable "mediapackage_manifestname" {}
+variable "mediapackage_origination" {}
+variable "mediapackage_startover_windowseconds" {}
+variable "mediapackage_time_delay_seconds" {}
+variable "apes_backend_bucket" {}
+variable "mediapackage_ad_trigger_splice_insert" {}
+variable "mediapackage_ad_trigger_provider_advertisement" {}
+variable "mediapackage_ad_trigger_distributor_advertisement" {}
+variable "mediapackage_ad_trigger_provider_placement_opportunity" {}
+variable "mediapackage_ad_trigger_distributor_placement_opportunity" {}
+variable "mediapackage_include_iframe_only_stream" {}
+# Variables for Origin endpoint with Dash Package type
+variable "mediapackage_dash_manifest_layout" {}
+variable "mediapackage_dash_manifest_window_seconds" {}
+variable "mediapackage_dash_min_buffer_time_seconds" {}
+variable "mediapackage_dash_min_update_period_seconds" {}
+variable "mediapackage_dash_segment_duration_seconds" {}
+variable "mediapackage_dash_segment_template_format" {}
+variable "mediapackage_dash_suggested_presentation_delay_seconds" {}
+variable "mediapackage_dash_origin_id" {}
+# Variables for Origin endpoint with Hls Package type
+variable "mediapackage_hls_playlist_window_seconds" {}
+variable "mediapackage_hls_program_date_time_interval_seconds" {}
+variable "mediapackage_hls_segment_duration_seconds" {}
+variable "mediapackage_hls_origin_id" {}
+variable "mediapackage_hls_use_audio_rendition_group" {}
+variable "tags"             {}

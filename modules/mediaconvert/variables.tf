@@ -1,0 +1,15 @@
+#variable "apes_archive_lambdafunction_role"   {}
+#variable "archive_mediaconvert_iam_policy"    {}
+variable "apes_archive_lambdafunction"   {}
+variable "apes_lambdahandler_name"    {}
+variable "apes_lambdaruntime"         {}
+variable "apes_lambdatimeout"         {}
+variable "apes_backend_bucket"        {}
+variable "elemental_archive_input_bucket"     {}
+variable "elemental_vod_input_bucket" {}
+variable "elemental_output_bucket"    {}
+variable "apes_archive_lambda"        {}
+variable "apes_vod_lambdafunction_role"   {}
+variable "vod_mediaconvert_iam_policy"    {}
+variable "apes_vod_lambdafunction"    {}
+variable "tags"                       {}

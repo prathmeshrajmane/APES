@@ -1,0 +1,246 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  MediaPackageChannelId:
+    Type: String
+  MediaPackageHlsManifestName:
+    Type: String
+  MediaPackageManifestId:
+    Type: String
+  MediaPackageSegmentDurationSeconds:
+    Type: Number
+  MediaPackageMaxVideoBitsPerSecond:
+    Type: Number
+  MediaPackageMinVideoBitsPerSecond:
+    Type: Number
+  MediaPackageStreamOrder:
+    Type: String
+  MediaPackageOriginId:
+    Type: String
+  MediaPackageManifestName:
+    Type: String
+  MediaPackageOrigination:
+    Type: String
+  MediaPackageStartoverWindowSeconds:
+    Type: Number
+  MediaPackageTimeDelaySeconds:
+    Type: Number
+  MediaPackageAdTriggerSpliceInsert:
+    Type: String
+  MediaPackageAdTriggerProviderAdvertisement:
+    Type: String
+  MediaPackageAdTriggerDistributorAdvertisement:
+    Type: String
+  MediaPackageAdTriggerProviderPlacementOpportunity:
+    Type: String
+  MediaPackageAdTriggerDistributorPlacementOpportunity:
+    Type: String
+  MediaPackageIncludeIframeOnlyStream:
+    Type: String
+  MediaPackageDashManifestLayout:
+    Type: String
+  MediaPackageDashManifestWindowSeconds:
+    Type: Number
+  MediaPackageDashMinBufferTimeSeconds:
+    Type: Number
+  MediaPackageDashMinUpdatePeriodSeconds:
+    Type: Number
+  MediaPackageDashSegmentDurationSeconds:
+    Type: Number
+  MediaPackageDashSegmentTemplateFormat:
+    Type: String
+  MediaPackageDashSuggestedPresentationDelaySeconds:
+    Type: Number
+  MediaPackageDashOriginId:
+    Type: String
+  MediaPackageHlsPlaylistWindowSeconds:
+    Type: Number
+  MediaPackageHlsProgramDateTimeIntervalSeconds:
+    Type: Number
+  MediaPackageHlsSegmentDurationSeconds:
+    Type: Number
+  MediaPackageHlsOriginId:
+    Type: String
+  MediaPackageHlsUseAudioRenditionGroup:
+    Type: String
+
+
+Resources:
+    MediaPackageChannel:
+      Type: 'AWS::MediaPackage::Channel'
+      Properties:
+        Description: Channel created for APES
+        Id: !Ref MediaPackageChannelId
+        Tags:
+          - Key: 'Project'
+            Value: 'APES'
+    MediaPackageOriginCMAF:
+        Type: AWS::MediaPackage::OriginEndpoint
+        Properties:
+            ChannelId: !Ref MediaPackageChannelId
+            CmafPackage:
+                HlsManifests:
+                    - ManifestName: !Ref MediaPackageHlsManifestName
+                      Id: !Ref MediaPackageManifestId
+                SegmentDurationSeconds: !Ref MediaPackageSegmentDurationSeconds
+                StreamSelection:
+                    MaxVideoBitsPerSecond: !Ref MediaPackageMaxVideoBitsPerSecond
+                    MinVideoBitsPerSecond: !Ref MediaPackageMinVideoBitsPerSecond
+                    StreamOrder: !Ref MediaPackageStreamOrder
+            Id: !Ref MediaPackageOriginId
+            ManifestName: !Ref MediaPackageManifestName
+            Origination: !Ref MediaPackageOrigination
+            StartoverWindowSeconds: !Ref MediaPackageStartoverWindowSeconds
+            TimeDelaySeconds: !Ref MediaPackageTimeDelaySeconds
+            Tags:
+              - Key: 'Project'
+                Value: 'APES'
+        DependsOn: MediaPackageChannel
+
+    MediaPackageOriginDash:
+        Type: AWS::MediaPackage::OriginEndpoint
+        Properties:
+          ChannelId: !Ref MediaPackageChannelId
+          DashPackage:
+              AdTriggers:
+                  - !Ref MediaPackageAdTriggerSpliceInsert
+                  - !Ref MediaPackageAdTriggerProviderAdvertisement
+                  - !Ref MediaPackageAdTriggerDistributorAdvertisement
+                  - !Ref MediaPackageAdTriggerProviderPlacementOpportunity
+                  - !Ref MediaPackageAdTriggerDistributorPlacementOpportunity
+              IncludeIframeOnlyStream: !Ref MediaPackageIncludeIframeOnlyStream
+              ManifestLayout: !Ref MediaPackageDashManifestLayout
+              ManifestWindowSeconds: !Ref MediaPackageDashManifestWindowSeconds
+              MinBufferTimeSeconds: !Ref MediaPackageDashMinBufferTimeSeconds
+              MinUpdatePeriodSeconds: !Ref MediaPackageDashMinUpdatePeriodSeconds
+              SegmentDurationSeconds: !Ref MediaPackageDashSegmentDurationSeconds
+              SegmentTemplateFormat: !Ref MediaPackageDashSegmentTemplateFormat
+              StreamSelection:
+                  MaxVideoBitsPerSecond: !Ref MediaPackageMaxVideoBitsPerSecond
+                  MinVideoBitsPerSecond: !Ref MediaPackageMinVideoBitsPerSecond
+                  StreamOrder: !Ref MediaPackageStreamOrder
+              SuggestedPresentationDelaySeconds: !Ref MediaPackageDashSuggestedPresentationDelaySeconds
+          Id: !Ref MediaPackageDashOriginId
+          ManifestName: !Ref MediaPackageManifestName
+          Origination: !Ref MediaPackageOrigination
+          StartoverWindowSeconds: !Ref MediaPackageStartoverWindowSeconds
+          TimeDelaySeconds: !Ref MediaPackageTimeDelaySeconds
+          Tags:
+            - Key: 'Project'
+              Value: 'APES'
+        DependsOn: MediaPackageChannel
+
+    MediaPackageOriginHls:
+      Type: AWS::MediaPackage::OriginEndpoint
+      Properties:
+        Id: !Ref MediaPackageHlsOriginId
+        ChannelId: !Ref MediaPackageChannelId
+        HlsPackage:
+          AdTriggers:
+            - !Ref MediaPackageAdTriggerSpliceInsert
+            - !Ref MediaPackageAdTriggerProviderAdvertisement
+            - !Ref MediaPackageAdTriggerDistributorAdvertisement
+            - !Ref MediaPackageAdTriggerProviderPlacementOpportunity
+            - !Ref MediaPackageAdTriggerDistributorPlacementOpportunity
+          IncludeIframeOnlyStream: !Ref MediaPackageIncludeIframeOnlyStream
+          PlaylistWindowSeconds: !Ref MediaPackageHlsPlaylistWindowSeconds
+          ProgramDateTimeIntervalSeconds: !Ref MediaPackageHlsProgramDateTimeIntervalSeconds
+          SegmentDurationSeconds: !Ref MediaPackageHlsSegmentDurationSeconds
+          StreamSelection:
+            MaxVideoBitsPerSecond: !Ref MediaPackageMaxVideoBitsPerSecond
+            MinVideoBitsPerSecond: !Ref MediaPackageMinVideoBitsPerSecond
+            StreamOrder: !Ref MediaPackageStreamOrder
+          UseAudioRenditionGroup: !Ref MediaPackageHlsUseAudioRenditionGroup
+        
+        ManifestName: !Ref MediaPackageManifestName
+        Origination: !Ref MediaPackageOrigination
+        StartoverWindowSeconds: !Ref MediaPackageStartoverWindowSeconds
+        TimeDelaySeconds: !Ref MediaPackageTimeDelaySeconds
+        Tags:
+          - Key: 'Project'
+            Value: 'APES'
+      DependsOn: MediaPackageChannel
+
+    MediaPackageCloudFrontDistribution:
+      Type: 'AWS::CloudFront::Distribution'
+      Properties:
+        DistributionConfig:
+          Enabled: true
+          Comment: Created as a part of mediapackage stack
+          CustomErrorResponses:
+            - ErrorCode: 400
+              ErrorCachingMinTTL: 1
+            - ErrorCode: 403
+              ErrorCachingMinTTL: 1
+            - ErrorCode: 404
+              ErrorCachingMinTTL: 1
+            - ErrorCode: 405
+              ErrorCachingMinTTL: 1
+            - ErrorCode: 414
+              ErrorCachingMinTTL: 1
+            - ErrorCode: 416
+              ErrorCachingMinTTL: 1
+            - ErrorCode: 500
+              ErrorCachingMinTTL: 1
+            - ErrorCode: 501
+              ErrorCachingMinTTL: 1
+            - ErrorCode: 502
+              ErrorCachingMinTTL: 1
+            - ErrorCode: 503
+              ErrorCachingMinTTL: 1
+            - ErrorCode: 504
+              ErrorCachingMinTTL: 1
+          DefaultCacheBehavior:
+            TargetOriginId: !Ref MediaPackageHlsOriginId
+            AllowedMethods:
+              - GET
+              - HEAD
+            CachedMethods:
+              - GET
+              - HEAD
+            Compress: false
+            ForwardedValues:
+              QueryString: true
+              QueryStringCacheKeys:
+                - m
+                - start
+                - end
+            SmoothStreaming: false
+            ViewerProtocolPolicy: redirect-to-https
+            MinTTL: 0
+            DefaultTTL: 86400
+            MaxTTL: 31536000
+          Origins:
+            - Id: !Ref MediaPackageHlsOriginId
+              DomainName: !Select 
+                - 0
+                - !Split 
+                  - /
+                  - !Select 
+                    - 1
+                    - !Split 
+                      - 'https://'
+                      - !GetAtt 
+                        - MediaPackageOriginHls
+                        - Url
+              OriginPath: ''
+              CustomOriginConfig:
+                HTTPPort: 80
+                HTTPSPort: 443
+                OriginProtocolPolicy: match-viewer
+                OriginSSLProtocols:
+                  - TLSv1
+                  - TLSv1.1
+                  - TLSv1.2
+                OriginReadTimeout: 30
+                OriginKeepaliveTimeout: 5
+          PriceClass: PriceClass_All
+        Tags:
+          - Key: 'mediapackage:cloudfront_assoc'
+            Value: !GetAtt 
+              - MediaPackageChannel
+              - Arn
+      DependsOn:
+        - MediaPackageOriginHls
+        - MediaPackageOriginCMAF
+        - MediaPackageOriginDash
+  
